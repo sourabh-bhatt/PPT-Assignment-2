@@ -1,0 +1,124 @@
+.grid-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    height: 100vh;
+    background-color: #ffffff;
+}
+  
+.header{
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-gap: 25px;
+    grid-area: header;
+    height: 100px;
+}
+  
+.main{
+    grid-area: main;
+    padding-top: 2px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 25px;
+    padding: 2px;
+    grid-area: footer;
+    height: 100px;
+}
+  
+.box{
+    background-color: rgb(83, 83, 232);
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+  
+.blue-box{
+    background-color: rgb(83, 83, 232);
+}
+
+.Blue-box{
+    background-color: rgb(83, 83, 232);
+}
+  
+.grey-box{
+    background-color: grey;
+}
+  
+.main-box{
+    background-color: grey;
+    height: 100%; 
+}
+
+
+/* Media Query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .grid-container{
+    height: 73vh;
+}
+    .main-box{
+    padding: 20px;
+    background-color: grey;
+    height: 78%; 
+}
+    .footer {
+    height: 150px;
+    grid-gap: 10px;
+    }
+
+.tablet-box{
+    display: block;
+    padding-top: 5px;
+    margin-top: 15px;
+    background-color: grey;
+    height: 400%;
+}
+  }
+
+  /* Media query for mobile  */
+  @media only screen and (max-width: 480px) {
+    .grid-container{
+        height: 90vh;
+    }
+
+    .main{
+        grid-area: main;
+        padding-top: 2px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .main-box{
+        background-color: grey;
+        height: 70%; 
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 25px;
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        height: 330px;
+    }
+    .blue-box{
+        background-color: rgb(83, 83, 232);
+        height: 100px;
+    }
+
+    .tablet-box{
+    display: none;
+  }
+  }
+  
+@media only screen and (min-width: 481px) and (max-width: 769px),
+only screen and (min-width: 1025px) and (max-width: 1279px),
+only screen and (min-width: 1281px) {
+.tablet-box {
+display: none;
+}
+}
